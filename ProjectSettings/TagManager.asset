@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 3265572301
+    locked: 0
+  - name: Pin
+    uniqueID: 3070455905
+    locked: 0
+  - name: Layout
+    uniqueID: 545613459
     locked: 0
