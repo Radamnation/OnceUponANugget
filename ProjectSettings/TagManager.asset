@@ -42,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Backgroud
+    uniqueID: 2272736415
+    locked: 0
+  - name: Siev
+    uniqueID: 3155862481
+    locked: 0
   - name: Map
     uniqueID: 3265572301
     locked: 0
