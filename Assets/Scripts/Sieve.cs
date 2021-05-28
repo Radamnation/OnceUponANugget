@@ -7,6 +7,10 @@ public class Sieve : MonoBehaviour
     [SerializeField] private Sprite[] mySprites;
     [SerializeField] private SpriteRenderer myHighlightSpriteRenderer;
     [SerializeField] private float shakeThreshold = 50f;
+    
+    [SerializeField] private Nugget nuggetPrefab;
+    [SerializeField] private float nuggetHorizontalPosition = 1.5f;
+    [SerializeField] private float nuggetVerticalPosition = 0.75f;
 
     private bool asBeenShaken = false;
     private Vector3 myInitialPosition;
@@ -39,6 +43,11 @@ public class Sieve : MonoBehaviour
         {
             asEnteredWater = true;
             mySpriteRenderer.sprite = mySprites[1];
+            var nuggets = GetComponentsInChildren<Nugget>();
+            foreach (Nugget nugget in nuggets)
+            {
+                Destroy(nugget.gameObject);
+            }
         }
         else if (transform.localPosition.y > -2 && asEnteredWater == true)
         {
@@ -49,6 +58,24 @@ public class Sieve : MonoBehaviour
         else if (transform.localPosition.y > -2 && asBeenShaken == true)
         {
             mySpriteRenderer.sprite = mySprites[0];
+            SpawnNuggets();
+        }
+    }
+
+    private void SpawnNuggets()
+    {
+        var nuggetToSpawn = Random.Range(0, 3);
+        for (int i = 0; i < nuggetToSpawn; i++)
+        {
+            var xPosition = Random.Range(-nuggetHorizontalPosition, nuggetHorizontalPosition);
+            var yPosition = Random.Range(-nuggetVerticalPosition, nuggetVerticalPosition);
+            var newNugget = Instantiate(nuggetPrefab, transform);
+            newNugget.transform.localPosition = new Vector3(xPosition, yPosition, -1);
+            var bigNuggetChance = Random.Range(0, 100);
+            if (bigNuggetChance < 20)
+            {
+                newNugget.BigNugget = true;
+            }
         }
     }
 

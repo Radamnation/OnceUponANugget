@@ -396,7 +396,8 @@ SpriteRenderer:
   m_SortingLayerID: -1139104815
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 429466374899991763, guid: 5a710a91026d9a34487ebf389b8feae2, type: 3}
+  m_Sprite: {fileID: -1061421649167371680, guid: eaacdb5681fdfb441bcb1019cae882b7,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -420,11 +421,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySprites:
-  - {fileID: 429466374899991763, guid: 5a710a91026d9a34487ebf389b8feae2, type: 3}
-  - {fileID: 7385539233298044628, guid: 5a710a91026d9a34487ebf389b8feae2, type: 3}
-  - {fileID: -7357150366751319487, guid: 5a710a91026d9a34487ebf389b8feae2, type: 3}
+  - {fileID: -1061421649167371680, guid: eaacdb5681fdfb441bcb1019cae882b7, type: 3}
+  - {fileID: 8460359932710579722, guid: eaacdb5681fdfb441bcb1019cae882b7, type: 3}
+  - {fileID: -7202940543021774652, guid: eaacdb5681fdfb441bcb1019cae882b7, type: 3}
   myHighlightSpriteRenderer: {fileID: 1088574057}
   shakeThreshold: 3
+  nuggetPrefab: {fileID: 2314429251007820000, guid: 9fcfe6bf0c0c29f4893eada8158c7daf,
+    type: 3}
+  nuggetHorizontalPosition: 1.5
+  nuggetVerticalPosition: 0.75
 --- !u!1001 &253005029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -587,10 +592,10 @@ RectTransform:
   m_Father: {fileID: 68668947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 359.99997, y: 210}
-  m_SizeDelta: {x: 250, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 305, y: 178.5}
+  m_SizeDelta: {x: -698, y: -457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
@@ -1029,7 +1034,7 @@ SpriteRenderer:
   m_SortingLayerID: -1139104815
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8634868253787997519, guid: 5a710a91026d9a34487ebf389b8feae2,
+  m_Sprite: {fileID: 7741852090651860100, guid: eaacdb5681fdfb441bcb1019cae882b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1072,6 +1077,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLimit: 12000
   timerText: {fileID: 280093140}
+  nuggetText: {fileID: 1792173152}
+  bigNuggetText: {fileID: 2077868687}
 --- !u!4 &1096279857
 Transform:
   m_ObjectHideFlags: 0
@@ -1293,10 +1300,10 @@ RectTransform:
   m_Father: {fileID: 68668947}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270, y: 90}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 228.5, y: 76}
+  m_SizeDelta: {x: -850, y: -457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633837873
 MonoBehaviour:
@@ -1452,7 +1459,7 @@ GameObject:
   - component: {fileID: 1792173153}
   - component: {fileID: 1792173152}
   m_Layer: 5
-  m_Name: 1gScore
+  m_Name: nuggetText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,10 +1479,10 @@ RectTransform:
   m_Father: {fileID: 68668947}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 420, y: 150}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 355, y: 127}
+  m_SizeDelta: {x: -800, y: -455}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792173152
 MonoBehaviour:
@@ -1549,10 +1556,10 @@ RectTransform:
   m_Father: {fileID: 68668947}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270, y: 150}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 228, y: 126.5}
+  m_SizeDelta: {x: -851, y: -456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860384939
 MonoBehaviour:
@@ -1752,7 +1759,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 545613459
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -2372,7 +2379,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: aa588606ffffab841b6574e34f7a8cb0, type: 2}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: f9716c7fb1ef12b4c99909ae8e719ff8, type: 2}
+    m_Data: {fileID: 11400000, guid: 9cd82a9128ea6f64589cc7eb122e44b3, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 4
     m_Data: {fileID: -6523222902320515145, guid: 1392da63072cc7b46837fde217795365,
@@ -2389,7 +2396,7 @@ Tilemap:
     m_Data: {fileID: -7352839431237009354, guid: 23b3c819db048f745b597eef8891b351,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -8082034906239467429, guid: 23b3c819db048f745b597eef8891b351,
+    m_Data: {fileID: -8210727937487274675, guid: 23b3c819db048f745b597eef8891b351,
       type: 3}
   m_TileMatrixArray:
   - m_RefCount: 26
@@ -2543,7 +2550,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1029394995
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7cbf51199bc864148b802be659caf9e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2589,7 +2596,7 @@ GameObject:
   - component: {fileID: 2077868688}
   - component: {fileID: 2077868687}
   m_Layer: 5
-  m_Name: 5gScore
+  m_Name: bigNuggetText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2609,10 +2616,10 @@ RectTransform:
   m_Father: {fileID: 68668947}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 420, y: 90}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 354.5, y: 76}
+  m_SizeDelta: {x: -799, y: -458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077868687
 MonoBehaviour:

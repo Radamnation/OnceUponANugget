@@ -45,8 +45,11 @@ TagManager:
   - name: Backgroud
     uniqueID: 2272736415
     locked: 0
-  - name: Siev
+  - name: Sieve
     uniqueID: 3155862481
+    locked: 0
+  - name: Nugget
+    uniqueID: 1296647161
     locked: 0
   - name: Map
     uniqueID: 3265572301
