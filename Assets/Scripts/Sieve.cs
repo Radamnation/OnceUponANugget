@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum SieveState { EMPTY, WATER, SOIL};
+
 public class Sieve : MonoBehaviour
 {
     [SerializeField] private Sprite[] mySprites;
     [SerializeField] private SpriteRenderer myHighlightSpriteRenderer;
     [SerializeField] private float shakeThreshold = 50f;
+    [SerializeField] private float waterLimit = -2.5f;
     
     [SerializeField] private Nugget nuggetPrefab;
     [SerializeField] private float nuggetHorizontalPosition = 1.5f;
     [SerializeField] private float nuggetVerticalPosition = 0.75f;
 
+    private SieveState myState = SieveState.EMPTY;
     private bool asBeenShaken = false;
     private Vector3 myInitialPosition;
     private CapsuleCollider2D myCapsuleCollider2D;
     private SpriteRenderer mySpriteRenderer;
 
-    private bool asEnteredWater = false;
     private Vector2 oldMouseAxis;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         myHighlightSpriteRenderer.enabled = false;
         myInitialPosition = transform.localPosition;
@@ -30,33 +31,43 @@ public class Sieve : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        CheckPosition();
+        CheckState();
         MouseShake();
     }
 
-    private void CheckPosition()
+    public void InitializeSieve()
     {
-        if (transform.localPosition.y < -2)
+        myState = SieveState.EMPTY;
+        mySpriteRenderer.sprite = mySprites[0];
+        DestroyNuggets();
+    }
+
+    private void CheckState()
+    {
+        if ((myState == SieveState.EMPTY || myState == SieveState.SOIL) && transform.localPosition.y < waterLimit)
         {
-            asEnteredWater = true;
+            myState = SieveState.WATER;
             mySpriteRenderer.sprite = mySprites[1];
-            var nuggets = GetComponentsInChildren<Nugget>();
-            foreach (Nugget nugget in nuggets)
-            {
-                Destroy(nugget.gameObject);
-            }
+            DestroyNuggets();
         }
-        else if (transform.localPosition.y > -2 && asEnteredWater == true)
+        if (myState == SieveState.WATER && transform.localPosition.y > waterLimit)
         {
-            asBeenShaken = false;
+            myState = SieveState.SOIL;
             mySpriteRenderer.sprite = mySprites[2];
-            asEnteredWater = false;
+            asBeenShaken = false;
         }
-        else if (transform.localPosition.y > -2 && asBeenShaken == true)
+        if (myState == SieveState.SOIL && asBeenShaken == true)
         {
+            myState = SieveState.EMPTY;
             mySpriteRenderer.sprite = mySprites[0];
             SpawnNuggets();
         }
@@ -76,6 +87,15 @@ public class Sieve : MonoBehaviour
             {
                 newNugget.BigNugget = true;
             }
+        }
+    }
+
+    private void DestroyNuggets()
+    {
+        var nuggets = GetComponentsInChildren<Nugget>();
+        foreach (Nugget nugget in nuggets)
+        {
+            Destroy(nugget.gameObject);
         }
     }
 

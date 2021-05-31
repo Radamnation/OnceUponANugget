@@ -8,14 +8,14 @@ public class Pin : MonoBehaviour
     [SerializeField] private SpriteRenderer myHighlightSpriteRenderer;
 
     private CircleCollider2D myCircleCollider2D;
-    private Background background;
+    private PlayArea playArea;
 
     // Start is called before the first frame update
     void Start()
     {
         myHighlightSpriteRenderer.enabled = false;
         myCircleCollider2D = GetComponent<CircleCollider2D>();
-        background = FindObjectOfType<Background>();
+        playArea = FindObjectOfType<PlayArea>();
     }
 
     // Update is called once per frame
@@ -36,6 +36,6 @@ public class Pin : MonoBehaviour
 
     private void OnMouseDown()
     {
-        background.UpdateSprite(myID);
+        playArea.UpdatePlayArea(myID);
     }
 }

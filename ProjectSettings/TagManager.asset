@@ -45,6 +45,9 @@ TagManager:
   - name: Backgroud
     uniqueID: 2272736415
     locked: 0
+  - name: KeyItem
+    uniqueID: 2093685513
+    locked: 0
   - name: Sieve
     uniqueID: 3155862481
     locked: 0
