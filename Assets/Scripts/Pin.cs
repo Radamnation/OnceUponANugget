@@ -13,9 +13,16 @@ public class Pin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myHighlightSpriteRenderer.enabled = false;
         myCircleCollider2D = GetComponent<CircleCollider2D>();
         playArea = FindObjectOfType<PlayArea>();
+        if (playArea.CurrentLocation != myID)
+        {
+            myHighlightSpriteRenderer.enabled = false;
+        }
+        else
+        {
+            myHighlightSpriteRenderer.color = Color.yellow;
+        }
     }
 
     // Update is called once per frame
@@ -31,11 +38,24 @@ public class Pin : MonoBehaviour
 
     private void OnMouseExit()
     {
-        myHighlightSpriteRenderer.enabled = false;
+        if (playArea.CurrentLocation != myID)
+        {
+            myHighlightSpriteRenderer.enabled = false;
+        }
     }
 
     private void OnMouseDown()
     {
-        playArea.UpdatePlayArea(myID);
+        if (playArea.CurrentLocation != myID)
+        {
+            var pins = FindObjectsOfType<Pin>();
+            foreach (Pin pin in pins)
+            {
+                pin.myHighlightSpriteRenderer.color = Color.white;
+                pin.myHighlightSpriteRenderer.enabled = false;
+            }
+            myHighlightSpriteRenderer.color = Color.yellow;
+            playArea.UpdatePlayArea(myID);
+        }
     }
 }

@@ -12,6 +12,7 @@ public class Sieve : MonoBehaviour
     [SerializeField] private float waterLimit = -2.5f;
     
     [SerializeField] private Nugget nuggetPrefab;
+    [SerializeField] private Key keyPrefab;
     [SerializeField] private float nuggetHorizontalPosition = 1.5f;
     [SerializeField] private float nuggetVerticalPosition = 0.75f;
 
@@ -20,6 +21,7 @@ public class Sieve : MonoBehaviour
     private Vector3 myInitialPosition;
     private CapsuleCollider2D myCapsuleCollider2D;
     private SpriteRenderer mySpriteRenderer;
+    private PlayArea playArea;
 
     private Vector2 oldMouseAxis;
 
@@ -29,6 +31,7 @@ public class Sieve : MonoBehaviour
         myInitialPosition = transform.localPosition;
         myCapsuleCollider2D = GetComponent<CapsuleCollider2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        playArea = FindObjectOfType<PlayArea>();
     }
 
     // Start is called before the first frame update
@@ -75,17 +78,31 @@ public class Sieve : MonoBehaviour
 
     private void SpawnNuggets()
     {
-        var nuggetToSpawn = Random.Range(0, 3);
-        for (int i = 0; i < nuggetToSpawn; i++)
+        if (playArea.CurrentLocation != 5)
         {
-            var xPosition = Random.Range(-nuggetHorizontalPosition, nuggetHorizontalPosition);
-            var yPosition = Random.Range(-nuggetVerticalPosition, nuggetVerticalPosition);
-            var newNugget = Instantiate(nuggetPrefab, transform);
-            newNugget.transform.localPosition = new Vector3(xPosition, yPosition, -1);
-            var bigNuggetChance = Random.Range(0, 100);
-            if (bigNuggetChance < 20)
+            var nuggetToSpawn = Random.Range(0, 3);
+            for (int i = 0; i < nuggetToSpawn; i++)
             {
-                newNugget.BigNugget = true;
+                var xPosition = Random.Range(-nuggetHorizontalPosition, nuggetHorizontalPosition);
+                var yPosition = Random.Range(-nuggetVerticalPosition, nuggetVerticalPosition);
+                var newNugget = Instantiate(nuggetPrefab, transform);
+                newNugget.transform.localPosition = new Vector3(xPosition, yPosition, -1);
+                var bigNuggetChance = Random.Range(0, 100);
+                if (bigNuggetChance < 20)
+                {
+                    newNugget.BigNugget = true;
+                }
+            }
+        }
+        else if (!playArea.KeyItemFound[playArea.CurrentLocation])
+        {
+            var keyChance = Random.Range(0, 100);
+            if (keyChance < 50)
+            {
+                var xPosition = Random.Range(-nuggetHorizontalPosition, nuggetHorizontalPosition);
+                var yPosition = Random.Range(-nuggetVerticalPosition, nuggetVerticalPosition);
+                var newKey = Instantiate(keyPrefab, transform);
+                newKey.transform.localPosition = new Vector3(xPosition, yPosition, -1);
             }
         }
     }
@@ -96,6 +113,11 @@ public class Sieve : MonoBehaviour
         foreach (Nugget nugget in nuggets)
         {
             Destroy(nugget.gameObject);
+        }
+        var keys = GetComponentsInChildren<Key>();
+        foreach (Key key in keys)
+        {
+            Destroy(key.gameObject);
         }
     }
 

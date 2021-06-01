@@ -54,6 +54,15 @@ TagManager:
   - name: Nugget
     uniqueID: 1296647161
     locked: 0
+  - name: Transition
+    uniqueID: 1100133275
+    locked: 0
+  - name: Blackout
+    uniqueID: 2320736241
+    locked: 0
+  - name: Score
+    uniqueID: 160370983
+    locked: 0
   - name: Map
     uniqueID: 3265572301
     locked: 0

@@ -7,14 +7,17 @@ public class KeyItem : MonoBehaviour
     [SerializeField] Vector3[] myKeyItemsPosition;
     [SerializeField] Sprite[] myKeyItemsSprites;
     [SerializeField] Sprite[] myKeyItemsHighlightSprites;
-    // [SerializeField] SpriteRenderer myHighlightSpriteRenderer;
+    [SerializeField] SpriteRenderer myHighlightSpriteRenderer;
 
-    private SpriteRenderer mySpriteRendrerer;
+    private SpriteRenderer mySpriteRenderer;
+    private PlayArea playArea;
 
     // Start is called before the first frame update
     void Start()
     {
-        mySpriteRendrerer = GetComponent<SpriteRenderer>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        playArea = FindObjectOfType<PlayArea>();
+        myHighlightSpriteRenderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -26,7 +29,24 @@ public class KeyItem : MonoBehaviour
     public void UpdateItem(int index)
     {
         transform.localPosition = myKeyItemsPosition[index];
-        mySpriteRendrerer.sprite = myKeyItemsSprites[index];
-        // myHighlightSpriteRenderer.sprite = myKeyItemsHighlightSprites[index];
+        mySpriteRenderer.sprite = myKeyItemsSprites[index];
+        myHighlightSpriteRenderer.sprite = myKeyItemsHighlightSprites[index];
+    }
+
+    private void OnMouseOver()
+    {
+        myHighlightSpriteRenderer.enabled = true;
+    }
+
+    private void OnMouseExit()
+    {
+        myHighlightSpriteRenderer.enabled = false;
+    }
+
+    private void OnMouseDown()
+    {
+        playArea.ItemFound();
+        myHighlightSpriteRenderer.enabled = false;
+        gameObject.SetActive(false);
     }
 }
