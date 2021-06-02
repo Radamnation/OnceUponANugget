@@ -11,6 +11,9 @@ public class PlayArea : MonoBehaviour
     [SerializeField] private Vector3 transitionPositionLeft = new Vector3(-12, 12, 0);
     [SerializeField] private Vector3 transitionPositionRight = new Vector3(12, -12, 0);
     [SerializeField] private float transitionTime;
+    [SerializeField] private GameObject myFireplace;
+    [SerializeField] private Door myDoor;
+    [SerializeField] private Chair myChair;
 
     private int currentLocation = 0;
     private Sieve mySieve;
@@ -68,10 +71,16 @@ public class PlayArea : MonoBehaviour
         UpdateBackgroundSprite();
         if (CurrentLocation == 0)
         {
+            myFireplace.gameObject.SetActive(true);
+            myDoor.gameObject.SetActive(true);
+            myChair.gameObject.SetActive(true);
             mySieve.gameObject.SetActive(false);
         }
         else
         {
+            myFireplace.gameObject.SetActive(false);
+            myDoor.gameObject.SetActive(false);
+            myChair.gameObject.SetActive(false);
             mySieve.gameObject.SetActive(true);
             mySieve.InitializeSieve();
         }

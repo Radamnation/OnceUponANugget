@@ -25,15 +25,22 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime * 100;
-        UpdateTime();
+        if (timer < 0)
+        {
+            Loose();
+        }
+        else
+        {
+            UpdateTime();
+        }
     }
 
     private void UpdateTime()
     {
         int milliseconds = (int) timer % 100;
         int seconds = (int) (timer - milliseconds) / 100 % 60;
-        int minutes = (int) (timer - milliseconds - seconds * 60) / 100 / 60;
-        timerText.text = minutes + ":" + seconds + "." + milliseconds;
+        // int minutes = (int) (timer - milliseconds - seconds * 60) / 1000 / 60;
+        timerText.text = seconds + "." + milliseconds;
     }
 
     public void ScoreNugget()
@@ -56,5 +63,15 @@ public class GameManager : MonoBehaviour
             bigNuggetText.text += "0";
         }
         bigNuggetText.text += bigNuggetScore.ToString();
+    }
+
+    private void Loose()
+    {
+        Debug.Log("You Lose");
+    }
+
+    public void Win()
+    {
+        Debug.Log("You Win");
     }
 }

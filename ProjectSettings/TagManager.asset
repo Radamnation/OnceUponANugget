@@ -48,6 +48,21 @@ TagManager:
   - name: KeyItem
     uniqueID: 2093685513
     locked: 0
+  - name: Chair
+    uniqueID: 181604081
+    locked: 0
+  - name: Door
+    uniqueID: 2428711799
+    locked: 0
+  - name: Rock
+    uniqueID: 1007645229
+    locked: 0
+  - name: Fire
+    uniqueID: 1073610197
+    locked: 0
+  - name: Hook
+    uniqueID: 1692776715
+    locked: 0
   - name: Sieve
     uniqueID: 3155862481
     locked: 0

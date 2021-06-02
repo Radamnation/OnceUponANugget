@@ -1,49 +1,31 @@
 fileFormatVersion: 2
-guid: 4257a1aa50d06ee4ca9fdf09811f2082
+guid: 01d08c2e5c79f954d8a95419d44fd241
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1455697818946780915
-    second: PuzzlePieces_0
+      213: -4109412795537874883
+    second: Fireplace_0
   - first:
-      213: -370308744830815213
-    second: PuzzlePieces_1
+      213: -1349743448530748606
+    second: Fireplace_1
   - first:
-      213: -5527658414445855315
-    second: PuzzlePieces_2
+      213: -8549371111265558562
+    second: Fireplace_2
   - first:
-      213: -3987758427681408323
-    second: PuzzlePieces_3
+      213: -5820212473665762020
+    second: Fireplace_3
   - first:
-      213: 7070504241984124741
-    second: PuzzlePieces_4
+      213: 1535553478911796009
+    second: Fireplace_4
   - first:
-      213: 7761224308061302976
-    second: PuzzlePieces_5
+      213: -4922875994413074701
+    second: Fireplace_5
   - first:
-      213: -3191304846862854910
-    second: PuzzlePieces_6
+      213: 1349574433340081236
+    second: Fireplace_6
   - first:
-      213: 8680145442856291652
-    second: PuzzlePieces_7
-  - first:
-      213: -5373141697053816000
-    second: PuzzlePieces_8
-  - first:
-      213: -2316209084355200143
-    second: PuzzlePieces_9
-  - first:
-      213: -6451010105115633855
-    second: PuzzlePieces_10
-  - first:
-      213: 8769642143680859630
-    second: PuzzlePieces_11
-  - first:
-      213: 4922120571885840784
-    second: PuzzlePieces_12
-  - first:
-      213: 4347347627797735678
-    second: PuzzlePieces_13
+      213: 8977374169285033484
+    second: Fireplace_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -140,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PuzzlePieces_0
+      name: Fireplace_0
       rect:
         serializedVersion: 2
         x: 1
         y: 1
-        width: 8
-        height: 8
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5e4483185688ad449b810bc5405fb52
-      internalID: -1455697818946780915
+      spriteID: 7aa998be080b26243ac23a090ac6426d
+      internalID: -4109412795537874883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PuzzlePieces_1
+      name: Fireplace_1
       rect:
         serializedVersion: 2
-        x: 11
+        x: 27
         y: 1
-        width: 8
-        height: 8
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8086ec19a78cd194eb233c969f48b24d
-      internalID: -370308744830815213
+      spriteID: a88408248a0175749ac9c6429d38b21c
+      internalID: -1349743448530748606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PuzzlePieces_2
+      name: Fireplace_2
       rect:
         serializedVersion: 2
-        x: 21
+        x: 53
         y: 1
-        width: 8
-        height: 8
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1fbd4a7b0c8fc4181fdd21628a5138
-      internalID: -5527658414445855315
+      spriteID: b2bf263cb87978c419c737e6fee9d377
+      internalID: -8549371111265558562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PuzzlePieces_3
+      name: Fireplace_3
       rect:
         serializedVersion: 2
-        x: 31
+        x: 79
         y: 1
-        width: 8
-        height: 8
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a83ddbcb5b7fdf441be0abae2f4cf8c9
-      internalID: -3987758427681408323
+      spriteID: 0df709cf755d81a4390a529e49e6e46b
+      internalID: -5820212473665762020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PuzzlePieces_4
+      name: Fireplace_4
       rect:
         serializedVersion: 2
-        x: 41
+        x: 105
         y: 1
-        width: 8
-        height: 8
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,188 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 918dcb4e8be4dac438ba303c2d4924ff
-      internalID: 7070504241984124741
+      spriteID: 5c313d57c7f5552419e6bf2ae982303d
+      internalID: 1535553478911796009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PuzzlePieces_5
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e07f78242158df34685b49b62cc057f6
-      internalID: 7761224308061302976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_6
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 559779444b19f4948bcd684a3a46cea4
-      internalID: -3191304846862854910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_7
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2bb8c64e470fe44b8ee06e914354b5a
-      internalID: 8680145442856291652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_8
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00746af501469c548a8c4795840c5517
-      internalID: -5373141697053816000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_9
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76842a46c6a6a0944b599d479a8b0940
-      internalID: -2316209084355200143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_10
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 131c1c7682c99724c8cdab74d5f1d754
-      internalID: -6451010105115633855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_11
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5a2e8f0497b9354aa0be6ad14bf9bbe
-      internalID: 8769642143680859630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_12
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 1
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49cc34ff9a8022848a10531a38bd9d62
-      internalID: 4922120571885840784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PuzzlePieces_13
+      name: Fireplace_5
       rect:
         serializedVersion: 2
         x: 131
         y: 1
-        width: 8
-        height: 8
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,8 +241,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 677f426b365bc814b96c666de90b1ff5
-      internalID: 4347347627797735678
+      spriteID: a81121a5b1110014a9eb91ce0be04953
+      internalID: -4922875994413074701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fireplace_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e9ef9643257c6499632fe880e5f011
+      internalID: 1349574433340081236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fireplace_7
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feedfdb5fea36b64f8af95d86aa00c25
+      internalID: 8977374169285033484
       vertices: []
       indices: 
       edges: []
