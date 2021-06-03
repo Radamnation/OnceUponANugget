@@ -62,6 +62,14 @@ public class Nugget : MonoBehaviour
     private void OnMouseDown()
     {
         IncreaseScore();
+        if (BigNugget)
+        {
+            FindObjectOfType<SoundManager>().PlayBigGoldNugget();
+        }
+        else
+        {
+            FindObjectOfType<SoundManager>().PlayGoldNugget();
+        }
         Destroy(gameObject);
     }
 }

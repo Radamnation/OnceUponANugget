@@ -46,6 +46,7 @@ public class KeyItem : MonoBehaviour
     private void OnMouseDown()
     {
         playArea.ItemFound();
+        FindObjectOfType<SoundManager>().PlayClick();
         myHighlightSpriteRenderer.enabled = false;
         gameObject.SetActive(false);
     }

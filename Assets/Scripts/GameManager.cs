@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("You Lose");
     }
 
-    public void Win()
+    public void Victory()
     {
         Debug.Log("You Win");
     }

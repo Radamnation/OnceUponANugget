@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6970c42fc78cfd44ebec9e03d12f86e7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - clickSFX: {instanceID: 0}
+  - goldNuggetSFX: {instanceID: 0}
+  - bigGoldNuggetSFX: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

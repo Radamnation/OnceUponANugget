@@ -34,6 +34,7 @@ public class Key : MonoBehaviour
     private void OnMouseDown()
     {
         playArea.ItemFound();
+        FindObjectOfType<SoundManager>().PlayClick();
         Destroy(gameObject);
     }
 }

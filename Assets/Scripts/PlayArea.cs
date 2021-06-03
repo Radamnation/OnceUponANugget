@@ -14,6 +14,7 @@ public class PlayArea : MonoBehaviour
     [SerializeField] private GameObject myFireplace;
     [SerializeField] private Door myDoor;
     [SerializeField] private Chair myChair;
+    [SerializeField] private AudioSource riverSound;
 
     private int currentLocation = 0;
     private Sieve mySieve;
@@ -27,6 +28,7 @@ public class PlayArea : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        riverSound.enabled = false;
         mySieve = GetComponentInChildren<Sieve>();
         UpdateLocation();
     }
@@ -50,6 +52,7 @@ public class PlayArea : MonoBehaviour
     public void UpdatePlayArea(int index)
     {
         CurrentLocation = index;
+        FindObjectOfType<SoundManager>().PlayFootStep();
         StartCoroutine(TransitionScreen());
     }
 
@@ -75,6 +78,7 @@ public class PlayArea : MonoBehaviour
             myDoor.gameObject.SetActive(true);
             myChair.gameObject.SetActive(true);
             mySieve.gameObject.SetActive(false);
+            riverSound.enabled = false;
         }
         else
         {
@@ -83,6 +87,7 @@ public class PlayArea : MonoBehaviour
             myChair.gameObject.SetActive(false);
             mySieve.gameObject.SetActive(true);
             mySieve.InitializeSieve();
+            riverSound.enabled = true;
         }
         if (KeyItemFound[CurrentLocation])
         {
