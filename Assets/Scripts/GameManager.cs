@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime * 100;
+        if (timer < 500)
+        {
+            timerText.color = Color.red;
+        }
+        else if (timer < 1500)
+        {
+            timerText.color = Color.yellow;
+        }
         if (timer < 0)
         {
             Loose();
@@ -40,7 +49,7 @@ public class GameManager : MonoBehaviour
         int milliseconds = (int) timer % 100;
         int seconds = (int) (timer - milliseconds) / 100 % 60;
         // int minutes = (int) (timer - milliseconds - seconds * 60) / 1000 / 60;
-        timerText.text = seconds + "." + milliseconds;
+        timerText.text = seconds + "." + milliseconds.ToString("00");
     }
 
     public void ScoreNugget()
@@ -67,11 +76,11 @@ public class GameManager : MonoBehaviour
 
     private void Loose()
     {
-        Debug.Log("You Lose");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Victory()
     {
-        Debug.Log("You Win");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 }

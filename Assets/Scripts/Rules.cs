@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Rules : MonoBehaviour
 {
-    private Text myText;
+    private TextMeshProUGUI myTMP;
     private bool active = false;
 
     public bool Active { get => active; set => active = value; }
@@ -13,7 +13,7 @@ public class Rules : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myText = GetComponent<Text>();
+        myTMP = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class Rules : MonoBehaviour
     {
         if (active)
         {
-            myText.color = Color.yellow;
+            myTMP.color = Color.yellow;
         }
     }
 
@@ -34,7 +34,7 @@ public class Rules : MonoBehaviour
     {
         if (active)
         {
-            myText.color = Color.white;
+            myTMP.color = Color.white;
         }
     }
 

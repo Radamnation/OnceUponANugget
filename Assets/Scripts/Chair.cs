@@ -44,6 +44,7 @@ public class Chair : MonoBehaviour
     {
         if (rock.MyFireStatus == FireStatus.FIRE && hook.MyHookStatus == HookStatus.FULL)
         {
+            FindObjectOfType<SoundManager>().PlayClick();
             gameManager.Victory();
             myHighlightSpriteRenderer.enabled = false;
         }

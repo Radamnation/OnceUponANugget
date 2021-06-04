@@ -62,6 +62,7 @@ public class Rock : MonoBehaviour
             if (playArea.KeyItemFound[3])
             {
                 myFireStatus = FireStatus.WOOD;
+                FindObjectOfType<SoundManager>().PlayClick();
                 mySpriteRenderer.sprite = mySprites[1];
                 myHighlightSpriteRenderer.sprite = myHighlightSprites[1];
                 myHighlightSpriteRenderer.enabled = false;
@@ -72,6 +73,7 @@ public class Rock : MonoBehaviour
             if (playArea.KeyItemFound[4])
             {
                 myFireStatus = FireStatus.FIRE;
+                FindObjectOfType<SoundManager>().PlayClick();
                 myHighlightSpriteRenderer.enabled = false;
                 myFire.SetActive(true);
             }

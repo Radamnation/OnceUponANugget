@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class Play : MonoBehaviour
+public class BackToTitle : MonoBehaviour
 {
     private TextMeshProUGUI myTMP;
     private bool active = false;
@@ -20,7 +20,7 @@ public class Play : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseOver()
@@ -43,7 +43,7 @@ public class Play : MonoBehaviour
     {
         if (active)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(1);
         }
     }
 }

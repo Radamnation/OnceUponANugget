@@ -59,6 +59,7 @@ public class Sieve : MonoBehaviour
         if ((myState == SieveState.EMPTY || myState == SieveState.SOIL) && transform.localPosition.y < waterLimit)
         {
             myState = SieveState.WATER;
+            FindObjectOfType<SoundManager>().PlaySploosh();
             mySpriteRenderer.sprite = mySprites[1];
             DestroyNuggets();
         }
@@ -71,6 +72,7 @@ public class Sieve : MonoBehaviour
         if (myState == SieveState.SOIL && asBeenShaken == true)
         {
             myState = SieveState.EMPTY;
+            FindObjectOfType<SoundManager>().PlaySieveShake();
             mySpriteRenderer.sprite = mySprites[0];
             SpawnNuggets();
         }

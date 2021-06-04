@@ -60,6 +60,7 @@ public class Hook : MonoBehaviour
             if (playArea.KeyItemFound[0])
             {
                 myHookStatus = HookStatus.POT;
+                FindObjectOfType<SoundManager>().PlayClick();
                 mySpriteRenderer.sprite = mySprites[1];
                 myHighlightSpriteRenderer.sprite = myHighlightSprites[1];
                 myHighlightSpriteRenderer.enabled = false;
@@ -70,6 +71,7 @@ public class Hook : MonoBehaviour
             if (playArea.KeyItemFound[1] && playArea.KeyItemFound[2] && playArea.KeyItemFound[6])
             {
                 myHookStatus = HookStatus.FULL;
+                FindObjectOfType<SoundManager>().PlayClick();
                 myHighlightSpriteRenderer.enabled = false;
             }
         }

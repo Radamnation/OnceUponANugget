@@ -52,6 +52,7 @@ public class Door : MonoBehaviour
             if (playArea.KeyItemFound[5])
             {
                 myDoorStatus = DoorStatus.OPEN;
+                FindObjectOfType<SoundManager>().PlayLock();
                 mySpriteRenderer.sprite = mySprites[1];
                 myHighlightSpriteRenderer.enabled = false;
                 myBoxCollider2D.enabled = false;
