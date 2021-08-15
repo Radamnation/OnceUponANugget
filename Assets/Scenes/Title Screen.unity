@@ -179,8 +179,8 @@ MonoBehaviour:
 
     a Nugget'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 31948863e6c57d74ca37020b9e75eaef, type: 2}
-  m_sharedMaterial: {fileID: -3633018155031943268, guid: 31948863e6c57d74ca37020b9e75eaef,
+  m_fontAsset: {fileID: 11400000, guid: 6311a8d8f6bc9524eb24f7475a712f79, type: 2}
+  m_sharedMaterial: {fileID: 6801554182077585474, guid: 6311a8d8f6bc9524eb24f7475a712f79,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -206,10 +206,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 72
+  m_fontSizeBase: 80
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -672,12 +672,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the map to move from one location to the next and try to find gold nuggets.  Simply
-    dip the sieve into the water and shake it to reveal nuggets. You only have 60
-    seconds to complete the game. Good luck!
+  m_text: Use the map to move from one location to the next and try to find gold nuggets.
+    Simply dip the sieve into the water and shake it to reveal nuggets. You only have
+    60 seconds to complete the game. Good luck!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 31948863e6c57d74ca37020b9e75eaef, type: 2}
-  m_sharedMaterial: {fileID: -3633018155031943268, guid: 31948863e6c57d74ca37020b9e75eaef,
+  m_fontAsset: {fileID: 11400000, guid: 6311a8d8f6bc9524eb24f7475a712f79, type: 2}
+  m_sharedMaterial: {fileID: 6801554182077585474, guid: 6311a8d8f6bc9524eb24f7475a712f79,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -703,10 +703,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 28.95
+  m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -744,12 +744,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 667525952}
-    characterCount: 206
+    characterCount: 205
     spriteCount: 0
-    spaceCount: 41
+    spaceCount: 40
     wordCount: 41
     linkCount: 0
-    lineCount: 7
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -878,8 +878,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: How to Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 31948863e6c57d74ca37020b9e75eaef, type: 2}
-  m_sharedMaterial: {fileID: -3633018155031943268, guid: 31948863e6c57d74ca37020b9e75eaef,
+  m_fontAsset: {fileID: 11400000, guid: 6311a8d8f6bc9524eb24f7475a712f79, type: 2}
+  m_sharedMaterial: {fileID: 6801554182077585474, guid: 6311a8d8f6bc9524eb24f7475a712f79,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -905,10 +905,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 35.7
+  m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -3231,8 +3231,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Let me Play
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 31948863e6c57d74ca37020b9e75eaef, type: 2}
-  m_sharedMaterial: {fileID: -3633018155031943268, guid: 31948863e6c57d74ca37020b9e75eaef,
+  m_fontAsset: {fileID: 11400000, guid: 6311a8d8f6bc9524eb24f7475a712f79, type: 2}
+  m_sharedMaterial: {fileID: 6801554182077585474, guid: 6311a8d8f6bc9524eb24f7475a712f79,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3258,10 +3258,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 35.7
+  m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
